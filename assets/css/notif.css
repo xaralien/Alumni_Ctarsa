@@ -1,0 +1,88 @@
+.notifhead .card {
+    width: 600px;
+    padding: 20px;
+    height: auto;
+    border: none;
+    box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
+  }
+
+  .notifhead {
+    background-color: #cb9224;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  .notifhead .btnemailnotif {
+    font-family: "Mukta", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-top: 3%;
+    transition: 0.5s;
+    color: white;
+    background: #cb9224;
+  }
+
+  .notifhead .btnemailnotif:hover {
+    background: #9a8743;
+    color: white;
+  }
+
+  .notifhead .brader2 {
+    background-color: #ffecd1;
+    opacity: 20px;
+  }
+
+  .notifhead h2 {
+    color: black;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 129.2%; /* 82.688px */
+  }
+
+  .notifhead a {
+    color: #9a8743;
+  }
+
+  .form-group .custom-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .leftss-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .leftss-icon {
+    left: 10px;
+  top: 24px; 
+  background: #EDEDED;
+  border-radius: 30px;
+  padding: 5px;
+  }
+  
+  .notifhead .form-control {
+    padding: 15px 45px;
+    margin-bottom: 20px;
+    height: 50px;
+    font-size: 13px;
+    line-height: 15;
+    font-weight: normal;
+    border-radius: 30px;
+
+    background: var(--color-secondary);
+border: 3px solid #F5F5F5;
+  }

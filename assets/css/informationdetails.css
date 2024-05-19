@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+/* Fonts */
+body {
+  font-family: 'Mukta', sans-serif;
+  background-color: #F3F3F3;
+}
+
+/* Colors */
+:root {
+  --color-default: #222222;
+  --color-primary: #CB9224;
+  --color-secondary: #fff;
+  --color-third: #9a8743;
+}
+
+    /*--------------------------------------------------------------
+# information card
+--------------------------------------------------------------*/
+    .informationdetail{
+       margin-top:7rem!important;
+      }
+
+    .informationdetails .card {
+      width: auto;
+      height: auto;
+    
+      padding: 40px;
+      background-color: var(--color-secondary);
+      border-radius: 30px;
+      border:none!important;
+    }
+
+    .blogimg {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 30px 30px!important;    }
+
+   
+      .informationdetails .card .card-title {
+        border-radius: 30px !important;
+        background: rgba(203, 146, 36, 0.10) !important;
+        color: var(--color-primary) !important;
+        display: inline-flex !important;
+        padding: 5px 30px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+      }
+
+    .section-title h2 {
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .informationcard .card h4 {
+      color: var(--color-primary);
+      font-size: 30px;
+    }
+
+    .informationcard .card-date {
+      font-size: 20px;
+    }
+
+    .desctext {
+      margin-top: 2%;
+    }
+
+
+  .card .card-judul{
+    color: var(--color-primary);
+    font-weight: 20px;
+  }
+
+  .card-date{
+    color: rgba(0, 0, 0, 0.50);
+  }
+
+
+
+  .card-body .card-title h5 {
+    font-size: 20px;
+  }
+  
+  .card-body p {
+    font-size: 10px;
+  }
+  
+ 
+  .card .card-text {
+    color: var(--color-primary);
+    font-size: 15px;
+  }
+
+  .card .card-title {
+    font-size: 15px;
+    color: var(--color-primary);
+  }
+
+  
+  .card .card-title1{
+    border-radius: 30px;
+  background: rgba(203, 146, 36, 0.10);
+  color: var(--color-primary);
+  width:60px;
+  height: auto;
+  font-size: 15px;
+  padding-left: 13px;
+  }
+
+  
+  

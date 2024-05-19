@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+/* Fonts */
+body {
+    font-family: 'Mukta', sans-serif;
+    background-color: #F3F3F3;
+}
+
+/* Colors */
+:root {
+    --color-default: #222222;
+    --color-primary: #CB9224;
+    --color-secondary: #fff;
+    --color-third: #9a8743;
+}
+
+.wrapper-body {
+  max-width: 1200px;
+  position: static;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/*--------------------------------------------------------------
+# galeryhead
+--------------------------------------------------------------*/
+
+.galeryhead12 {
+    width: 100%;
+    height: 50vh;
+    background: url("../image/datalumni.png") top center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 70px;
+  }
+
+.tablealumni{
+  margin: 20px;
+}
+
+/* Style the entire table */
+table {
+  width: 100%; /* Make the table fill its container */
+  border-collapse: collapse; /* Merge cell borders into a single line */
+  font-family: Arial, sans-serif; /* Choose a font */
+}
+
+/* Style table headers */
+.tablealumni th {
+  background: rgba(203, 146, 36, 0.20);
+  border: 1px solid #ddd; /* Add a border */
+  padding: 8px; /* Add padding */
+  text-align: left; /* Align text to the left */
+}
+
+
+
+/* Style table cells */
+.tablealumni td {
+  background: rgba(203, 146, 36, 0.10);
+  border: 1px solid #ddd; /* Add a border */
+  padding: 8px; /* Add padding */
+  text-align: left; /* Align text to the left */
+}
+
+.tablealumni tbody tr:nth-child(even) td {
+  background: rgba(203, 146, 36, 0.10);
+}
+
+.tablealumni tbody tr:nth-child(odd) td {
+  background: rgba(203, 146, 36, 0.10);
+
+
+}
+
+/* Add hover effect to rows */
+tr:hover {
+  background-color: #e2e2e2; /* Change background color on hover */
+}

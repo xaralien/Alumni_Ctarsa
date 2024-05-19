@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+
+/* Fonts */
+body {
+	font-family: "Mukta", sans-serif;
+	background-color: #f3f3f3;
+}
+
+/* Colors */
+:root {
+	--color-default: #222222;
+	--color-primary: #cb9224;
+	--color-secondary: #fff;
+	--color-third: #9a8743;
+}
+
+.wrapper-body {
+	max-width: 1200px;
+	position: static;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+}
+
+/*--------------------------------------------------------------
+# galeryhead
+--------------------------------------------------------------*/
+
+.galeryhead20 .blogtext {
+	padding-top: 120px;
+	color: var(--color-secondary);
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.galeryhead20 .blogtext h1 {
+	font-weight: 700;
+	color: var(--color-primary);
+}
+
+body {
+	background: #f5f5f5;
+}
+
+.testimoni .card .card-img-top {
+	max-width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 8px 20px -4px #95abbb;
+	width: 250px;
+	height: 250px;
+}
+
+.testimoni .card {
+	border-radius: 30px;
+	background: #fff;
+	width: auto;
+	height: auto;
+	border: none;
+	padding: 50px;
+	margin-bottom: 30px;
+}
+
+.judul h2 {
+	color: var(--primary, #cb9224) !important;
+	font-family: Mukta !important;
+	font-size: 23px !important;
+	font-style: normal !important;
+	font-weight: 700 !important;
+	line-height: normal !important;
+}
+
+.judul1 p {
+	color: rgba(0, 0, 0, 0.5) !important;
+	text-align: center !important;
+	font-family: Mukta !important;
+	font-size: 12px !important;
+	font-style: normal;
+	font-weight: 600 !important;
+	line-height: normal !important;
+	border-radius: 30px;
+	background: rgba(203, 146, 36, 0.1) !important;
+	padding: 5px;
+}
+
+.quote {
+	position: relative;
+	color: var(--color-primary);
+}
+
+.testi {
+	color: rgba(0, 0, 0, 0.8) !important;
+	font-family: Mukta !important;
+	font-size: 18px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: normal !important;
+}
+
+.testimoni .image-container {
+	position: relative; /* Make the container a positioning context for children */
+	display: flex; /* Use flexbox to center the button */
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+.testimoni .image-container .video .btn-play {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	box-sizing: content-box;
+	display: block;
+	width: 8px;
+	height: 20px;
+	border-radius: 50%;
+	border: 5px solid var(--color-secondary);
+	outline: none;
+	padding: 18px 20px 18px 28px;
+	background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+	backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+}
+
+.testimoni .image-container .video .btn-play:before {
+	content: "";
+	position: absolute;
+	z-index: 0;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+	backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+	border-radius: 50%;
+	animation: pulse-border 1500ms ease-out infinite;
+}
+
+.testimoni .image-container .video .btn-play:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: block;
+	width: 80px;
+	height: 80px;
+	background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+	backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+	border-radius: 50%;
+	transition: all 200ms;
+}
+
+.video .btn-play span {
+	display: block;
+	position: absolute;
+	left: 38%;
+	top: 30%;
+	z-index: 3;
+	width: 0;
+	height: 0;
+	border-left: 22px solid var(--color-secondary);
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+}
+
+@keyframes pulse-border {
+	0% {
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+		opacity: 0;
+	}
+}
+
+#videoModal .modal-dialog {
+	position: relative;
+	max-width: 800px;
+	margin: 60px auto 0 auto;
+}
+
+#videoModal .modal-body {
+	position: relative;
+	padding: 0px;
+}
+
+#videoModal .close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 0px;
+	top: -30px;
+	z-index: 999;
+	font-size: 30px;
+	font-weight: normal;
+	color: #ffffff;
+	background: #000000;
+	opacity: 1;
+}
+
+@media screen and (min-width: 769px) {
+	[data-aos-delay] {
+		transition-delay: 0 !important;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 420px) {
+	.judul h2 {
+		font-size: 16px;
+		margin-left: 20%;
+	}
+
+	.judul1 p {
+		color: rgba(0, 0, 0, 0.5);
+		font-size: 10px;
+	}
+
+	.testi {
+		font-size: 14px;
+	}
+
+	.testimoni .card .card-img-top {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 840px) {
+	.judul h2 {
+		font-size: 18px;
+	}
+
+	.judul1 p {
+		color: rgba(0, 0, 0, 0.5);
+		font-size: 10px;
+	}
+
+	.testi {
+		font-size: 14px;
+	}
+
+	.testimoni .card .card-img-top {
+		width: 200px;
+		height: 200px;
+	}
+}
