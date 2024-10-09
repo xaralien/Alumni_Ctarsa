@@ -87,8 +87,8 @@
 
           <div class="section-title">
               <h2 class="text-center">Gallery</h2>
-              <p class="text-center">Check our Portfolio</p>
-              <p class="text-center">lorem jsdssk</p>
+              <p class="text-center">Check our Photo!</p>
+              <p class="text-center">Kenangan Manis Perlu Diabadikan!</p>
           </div>
 
 

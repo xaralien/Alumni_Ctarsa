@@ -8,10 +8,10 @@ class Information extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if ($this->uri->uri_string() !== 'login' && !$this->session->userdata('users_logged_in')) {
-            $this->session->set_flashdata('error', 'Access denied. You need to login first!');
-            redirect('user/login');
-        };
+        // if ($this->uri->uri_string() !== 'login' && !$this->session->userdata('users_logged_in')) {
+        //     $this->session->set_flashdata('error', 'Access denied. You need to login first!');
+        //     redirect('user/login');
+        // };
         $this->load->model('User_m', 'user');
         $this->load->library('session');
 

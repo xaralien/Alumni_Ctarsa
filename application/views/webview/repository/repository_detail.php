@@ -2,8 +2,8 @@
 
     <div class="blogtext wrapper-body text-center ">
         <h1>Repository</h1>
-        <p>Lorem ipsum dolor sit amet, syarat dan ketentuan </p>
-        <p>Lorem ipsum dolor sit amet consectetur </p>
+        <p>Temukan berbagai jurnal penelitian yang menarik dan dapatkan</p>
+        <p>informasi terbaru tentang bidang ilmu yang diminati</p>
     </div>
 </section>
 

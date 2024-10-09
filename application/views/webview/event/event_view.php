@@ -2,8 +2,8 @@
 
      <div class="blogtext-event wrapper-body text-center ">
          <h1>Event</h1>
-         <p class="text-white">Lorem ipsum dolor sit amet, syarat dan ketentuan </p>
-         <p class="text-white">Lorem ipsum dolor sit amet consectetur </p>
+         <p class="text-white">Ikuti beragam acara menarik yang sedang atau akan datang untuk</p>
+         <p class="text-white">memberikan pengalaman yang berkesan</p>
      </div>
  </section>
 
@@ -81,7 +81,7 @@
                                  <p class="headerblog">Coming</p>
                              <?php }  ?>
 
-                             <h3 class="headerblog1"><?php echo substr($row->description, 0, 60) . '...'; ?> </h3>
+                             <h3 class="headerblog1"><?php echo substr($row->title, 0, 60) . '...'; ?> </h3>
                              <h3 class="headerblog3 "><?php echo $row->date_event; ?></h3>
                              <p class="headerblog2"><?php echo substr($row->description, 0, 150) . '...'; ?></p>
                          </div>

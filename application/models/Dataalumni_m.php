@@ -5,22 +5,30 @@ class Dataalumni_m extends CI_Model
 
 
     var $table = 'mast_students';
-    var $column_order = array('a.id', 'a.name', 'a.id_mast_school', 'a.year_graduate', 'a.institute',  'c.instagram', 'c.linkedin', 'c.facebook', 'c.tiktok'); //set column field database for datatable orderable
-    var $column_search = array('a.name', 'a.institute'); //set column field database for datatable searchable 
+    var $column_order = array('a.id', 'a.name', 'd.school_name', 'a.year_graduate', 'a.student_status', 'a.institute'); //set column field database for datatable orderable
+    var $column_search = array('a.id', 'a.name', 'd.school_name', 'a.year_graduate', 'a.student_status', 'a.institute'); //set column field database for datatable searchable 
     var $order = array('a.year_graduate' => 'asc', 'a.name' => 'asc'); // default order 
 
 
-
-    function _get_datatables_query()
+    function _get_datatables_query($sekolah = null, $tahun_kelulusan = null, $status = null)
     {
 
-        $this->db->select('a.*, c.facebook, c.instagram, c.tiktok, c.linkedin, c.institute, d.school_name');
+        $this->db->select('a.*, c.facebook, c.instagram, c.tiktok, c.linkedin, d.school_name');
         $this->db->from('mast_students as a');
         $this->db->join('_users as b', 'b.nisn = a.nisn', 'left');
         $this->db->join('_users_sosmed as c', 'c.id = b.id', 'left');
         $this->db->join('mast_school as d', 'd.id = a.id_mast_school', 'left');
         $this->db->where('a.active', 1);
         // $this->db->where('publish', 0);
+        if ($sekolah) {
+            $this->db->where('d.id', $sekolah);
+        }
+        if ($tahun_kelulusan) {
+            $this->db->where('a.year_graduate', $tahun_kelulusan);
+        }
+        if ($status) {
+            $this->db->where('a.student_status', $status);
+        }
         $i = 0;
 
         foreach ($this->column_search as $item) // loop column 
@@ -51,9 +59,9 @@ class Dataalumni_m extends CI_Model
         }
     }
 
-    function get_datatables()
+    public function get_datatables($sekolah = null, $tahun_kelulusan = null, $status = null)
     {
-        $this->_get_datatables_query();
+        $this->_get_datatables_query($sekolah, $tahun_kelulusan, $status);
         if ($_POST['length'] != -1)
             $this->db->limit($_POST['length'], $_POST['start']);
         $query = $this->db->get();
@@ -142,4 +150,35 @@ class Dataalumni_m extends CI_Model
     //     $query = $this->db->get();
     //     return $this->db->count_all_results();
     // }
+
+    function exportpdf($sekolah = null, $tahun_kelulusan = null, $status = null)
+    {
+
+        $this->db->select('a.*, c.facebook, c.instagram, c.tiktok, c.linkedin, d.school_name');
+        $this->db->from('mast_students as a');
+        $this->db->join(
+            '_users as b',
+            'b.nisn = a.nisn',
+            'left'
+        );
+        $this->db->join('_users_sosmed as c', 'c.id = b.id', 'left');
+        $this->db->join(
+            'mast_school as d',
+            'd.id = a.id_mast_school',
+            'left'
+        );
+        $this->db->where('a.active', 1);
+        // $this->db->where('publish', 0);
+        if ($sekolah) {
+            $this->db->where('d.id', $sekolah);
+        }
+        if ($tahun_kelulusan) {
+            $this->db->where('a.year_graduate', $tahun_kelulusan);
+        }
+        if ($status) {
+            $this->db->where('a.student_status', $status);
+        }
+        $query = $this->db->get();
+        return $query->result();
+    }
 }

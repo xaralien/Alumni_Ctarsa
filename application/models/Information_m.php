@@ -14,6 +14,9 @@ class Information_m extends CI_Model
         $this->db->from('trans_banner_information');
         $this->db->where('active', 1);
         $this->db->where('publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('status', 'Public');
+        }
 
         $this->db->order_by('created', 'desc');
         $this->db->limit('6');
@@ -27,7 +30,6 @@ class Information_m extends CI_Model
         $this->db->from('mast_cat_informations');
         // $this->db->where('id != 4 and id !=3');
         $this->db->where('active', 1);
-
         $query = $this->db->get();
         return $query->result();
         // return $this->db->get($this->table_type)->result();
@@ -42,6 +44,9 @@ class Information_m extends CI_Model
         $this->db->where('tr.id', $id);
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         $query = $this->db->get();
         return $query->result();
     }
@@ -55,6 +60,9 @@ class Information_m extends CI_Model
         $this->db->where('tr.id_cat_informations', 2);
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         $this->db->order_by('date', 'desc');
         $this->db->limit('1');
         $query = $this->db->get();
@@ -68,6 +76,9 @@ class Information_m extends CI_Model
         $this->db->join('mast_cat_informations m', 'tr.id_cat_informations=m.id', 'left');
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         $this->db->order_by('count', 'desc');
         $this->db->limit('6');
         $query = $this->db->get();
@@ -81,6 +92,9 @@ class Information_m extends CI_Model
         $this->db->join('mast_cat_informations m', 'tr.id_cat_informations=m.id', 'left');
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         $this->db->order_by('count', 'desc');
         // $this->db->limit('6');
         $query = $this->db->get();
@@ -95,6 +109,9 @@ class Information_m extends CI_Model
         $this->db->join('mast_cat_informations m', 'tr.id_cat_informations=m.id', 'left');
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         $this->db->order_by('date', 'desc');
         $this->db->limit('6');
         $query = $this->db->get();
@@ -123,6 +140,9 @@ class Information_m extends CI_Model
         }
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         if ($this->input->get('sh_p') == 'popular') {
             $this->db->order_by('count', 'desc');
         } else if ($this->input->get('sh_p') == 'new') {
@@ -160,7 +180,9 @@ class Information_m extends CI_Model
         }
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
-
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         $query = $this->db->get();
         $result = $query->result_array();
 
@@ -187,7 +209,12 @@ class Information_m extends CI_Model
             }
         }
         $this->db->where('tr.active', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
+
         $this->db->where('tr.publish', 1);
+
         if ($this->input->get('sh_n') == 'popular') {
             $this->db->order_by('count', 'desc');
         } else if ($this->input->get('sh_n') == 'new') {
@@ -225,6 +252,9 @@ class Information_m extends CI_Model
         }
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
 
         $query = $this->db->get();
         $result = $query->result_array();
@@ -239,6 +269,10 @@ class Information_m extends CI_Model
         $this->db->join('mast_cat_informations m', 'tr.id_cat_informations=m.id', 'left');
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
+
         $this->db->order_by('date', 'desc');
         // $this->db->limit('6');
         $query = $this->db->get();
@@ -263,6 +297,9 @@ class Information_m extends CI_Model
         $this->db->where('tr.id_cat_informations', $cat);
         $this->db->where('tr.active', 1);
         $this->db->where('tr.publish', 1);
+        if (!$this->session->userdata('users_logged_in')) {
+            $this->db->where('tr.status', 'Public');
+        }
         $this->db->order_by('date', 'desc');
         $query = $this->db->get();
         return $query->result();

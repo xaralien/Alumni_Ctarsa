@@ -16,38 +16,46 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="<?php echo base_url('home') ?>">Home</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="<?php echo base_url('News') ?>">News</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="<?php echo base_url('information') ?>">Information</a>
                     </li>
+                    <?php
+                    if ($this->session->userdata('users_logged_in')) {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url('event') ?>">Event</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('event') ?>">Event</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url('forum') ?>">Forum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url('repository') ?>">Repository</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('forum') ?>">Forum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('repository') ?>">Repository</a>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="<?php echo base_url('gallery') ?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Gallery
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="<?php echo base_url('gallery/type?cat=All') ?>">All</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('gallery/type?cat=Photo') ?>">Foto</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('gallery/type?cat=Video') ?>">Video</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="<?php echo base_url('gallery') ?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Gallery
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="<?php echo base_url('gallery/type?cat=All') ?>">All</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('gallery/type?cat=Photo') ?>">Foto</a></li>
-                            <li><a class="dropdown-item" href="<?php echo base_url('gallery/type?cat=Video') ?>">Video</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('blog') ?>">Blogs</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url('blog') ?>">Blogs</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
 
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('home/#donation') ?>">Donation</a>

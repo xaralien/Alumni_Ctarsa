@@ -302,7 +302,7 @@
                             <div class="image-container">
                                 <div class="video">
                                     <img class="card-img-top" src="assets/testimoni_mis.PNG" alt="testi" />
-                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/0pc2Z9tZnG4?si=xBp-3J_hCxyODDhi" data-bs-target="#videoModal">
+                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/yjhM9C3eiJQ" data-bs-target="#videoModal">
                                         <span></span>
                                     </button>
                                 </div>
@@ -322,7 +322,7 @@
                             <div class="image-container">
                                 <div class="video">
                                     <img class="card-img-top" src="assets/testimoni_fdya.PNG" alt="testi" />
-                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/0pc2Z9tZnG4?si=xBp-3J_hCxyODDhi" data-bs-target="#videoModal">
+                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/ukikC8Jm2r4" data-bs-target="#videoModal">
                                         <span></span>
                                     </button>
                                 </div>
@@ -340,7 +340,7 @@
                             <div class="image-container">
                                 <div class="video">
                                     <img class="card-img-top" src="assets/testimoni_ahw.PNG" alt="testi" />
-                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/0pc2Z9tZnG4?si=xBp-3J_hCxyODDhi" data-bs-target="#videoModal">
+                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/HgOysrXBDCg" data-bs-target="#videoModal">
                                         <span></span>
                                     </button>
                                 </div>
@@ -358,7 +358,7 @@
                             <div class="image-container">
                                 <div class="video">
                                     <img class="card-img-top" src="assets/testimoni_tar.PNG" alt="testi" />
-                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/0pc2Z9tZnG4?si=xBp-3J_hCxyODDhi" data-bs-target="#videoModal">
+                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/okSZYkn8rco" data-bs-target="#videoModal">
                                         <span></span>
                                     </button>
                                 </div>
@@ -376,7 +376,7 @@
                             <div class="image-container">
                                 <div class="video">
                                     <img class="card-img-top" src="assets/testimoni_hir.PNG" alt="testi" />
-                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/0pc2Z9tZnG4?si=xBp-3J_hCxyODDhi" data-bs-target="#videoModal">
+                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/KJoq6ZKTMrU" data-bs-target="#videoModal">
                                         <span></span>
                                     </button>
                                 </div>
@@ -394,7 +394,7 @@
                             <div class="image-container">
                                 <div class="video">
                                     <img class="card-img-top" src="assets/testimoni_djna.PNG" alt="testi" />
-                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/0pc2Z9tZnG4?si=xBp-3J_hCxyODDhi" data-bs-target="#videoModal">
+                                    <button type="button" class="btn-play" data-bs-toggle="modal" data-video-src="https://www.youtube.com/embed/T-0PyWkzApQ" data-bs-target="#videoModal">
                                         <span></span>
                                     </button>
                                 </div>
